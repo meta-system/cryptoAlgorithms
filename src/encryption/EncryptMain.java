@@ -5,7 +5,9 @@ import java.util.Arrays;
 public class EncryptMain {
 	
 	private static char [] plainText = {'b','r','u','c','e','s','c','h','n','e','i','e','r'};
-	private static String key = "Licht";
+	private static String key = "licht";
+	
+	
 	
 	public static void main(String[] args) {
 		
