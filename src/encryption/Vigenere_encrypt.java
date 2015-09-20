@@ -27,7 +27,7 @@ public class Vigenere_encrypt {
 			if (encrypt){
 			System.out.println(i);
 				sumArray[i] = startIntArray[i] + keyArray[keyPos];
-				
+				System.out.println("test");
 			} else {
 				sumArray[i] = startIntArray[i] - keyArray[keyPos];
 			}
@@ -35,7 +35,7 @@ public class Vigenere_encrypt {
 				sumArray[i] *= (-1);
 			}
 			
-			if (sumArray[i] > 26){
+			if (sumArray[i] > 26){			
 				sumArray[i] = sumArray[i] % 26;
 			}
 			
