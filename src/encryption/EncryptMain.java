@@ -1,30 +1,19 @@
 package encryption;
 
-import java.util.Arrays;
-
 public class EncryptMain {
 	
-	private static char [] plainText = {'b','r','u','c','e','s','c','h','n','e','i','e','r','z'};
-	private static String key = "licht";
-	
-	
+	private static String pText = "So gut, Herr Nelles?!";
 	
 	public static void main(String[] args) {
 		
-		Caesar_encrypt myCaesar = new Caesar_encrypt();
+		EncryptAlgorithms myCaesar = new EncryptAlgorithms();	//neues Objekt der Klasse EncryptAlgorithms
 		
-		char[] cryptText = myCaesar.cesarEncrypt(plainText, 3, true);
-		System.out.println("Encrypted Text: " +Arrays.toString(cryptText));
+		String cryptText = myCaesar.cesarEncrypt(pText, 3, true);	//die caesarEncrypt Funktion wird aufgerufen
+		System.out.println("Encrypted Text: " +cryptText);
 		
 		cryptText = myCaesar.cesarEncrypt(cryptText, 3, false);
-		System.out.println("Decrypted Text: " +Arrays.toString(cryptText));
-		
-		Vigenere_encrypt myVigenere = new Vigenere_encrypt();
-		
-		cryptText = myVigenere.vigEncrypt(plainText, key, true);
-		System.out.println("Decrypted Text: " +Arrays.toString(cryptText));
-		cryptText = myVigenere.vigEncrypt(plainText, key, false);
-		System.out.println("Decrypted Text: " +Arrays.toString(cryptText));
+		System.out.println("Decrypted Text: " +cryptText);
+
 	}
 
 }
