@@ -25,9 +25,9 @@ public class EncryptAlgorithms {
 	public static String vigenereEncrypt(String startText, String key, boolean encrypt) {
 		// Array- und Variablendeklaration
 		char[] sArray = startText.toCharArray();
-		char[] eArray = new char[sArray.length];
-		char[] kCArray = key.toCharArray();
-		int[] kArray = new int[kCArray.length];
+		char[] eArray = new char[sArray.length];//endArray
+		char[] kCArray = key.toCharArray();		//schlüsselArray
+		int[] kArray = new int[kCArray.length];	//int-Funktion der schlüsselArray-Werte
 		int keyPos = 0;
 
 		for (int i = 0; i < kCArray.length; i++) {
